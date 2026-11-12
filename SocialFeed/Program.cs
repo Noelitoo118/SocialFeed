@@ -38,5 +38,12 @@ public class Program
         Console.WriteLine(poll1.Vote());
         Console.WriteLine(poll1.GetDescription());
         Console.WriteLine(poll1.Score());
+
+        ModerationQueue mQ = new ModerationQueue();
+        mQ.ReportItem(a);
+        Console.WriteLine(mQ.ToReview.Count);
+        mQ.ReportItem(a);
+        mQ.ReportItem(a);
+        Console.WriteLine(mQ.ToReview.Count);
     }
 }
